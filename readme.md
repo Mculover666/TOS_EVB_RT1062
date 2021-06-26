@@ -3,4 +3,4 @@
 - [i.MX RT开发笔记-03 | i.MX RT1062地址空间映射](https://mculover666.blog.csdn.net/article/details/117922062)
 - [i.MX RT开发笔记-04 | i.MX RT1062启动方式](https://mculover666.blog.csdn.net/article/details/117956670)
 - [i.MX RT开发笔记-05 | 新建 MDK 寄存器工程](https://mculover666.blog.csdn.net/article/details/118195276)
-- [i.MX RT开发笔记-06 | RT1062 使用 IOMUXC 和 GPIO 点亮LED](https://mculover666.blog.csdn.net/article/details/118227853)
+- [i.MX RT开发笔记-06 | i.MX RT1062 使用 IOMUXC 和 GPIO 点亮LED](https://mculover666.blog.csdn.net/article/details/118227853)
