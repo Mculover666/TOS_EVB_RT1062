@@ -10,11 +10,13 @@ void ccm_clock_list(void)
     printf("--CPU: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
     printf("--AHB: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
     printf("--SEMC: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
-    printf("--SYSPLL: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
-    printf("--SYSPLLPFD0: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
-    printf("--SYSPLLPFD1: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
-    printf("--SYSPLLPFD2: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
-    printf("--SYSPLLPFD3: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));
+    printf("--kCLOCK_ArmPllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_ArmPllClk));
+    printf("--kCLOCK_SysPllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
+    printf("--kCLOCK_Usb1PllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb1PllClk));
+    printf("--kCLOCK_AudioPllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AudioPllClk));
+    printf("--kCLOCK_EnetPll0Clk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_EnetPll0Clk));
+    printf("--kCLOCK_VideoPllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_VideoPllClk));
+    printf("--kCLOCK_Usb2PllClk: %d Hz\r\n", CLOCK_GetFreq(kCLOCK_Usb2PllClk));
 }
 
 int main(void)
@@ -34,9 +36,11 @@ int main(void)
     
 	while (1) {
         bsp_led_ctl (0);
-        SDK_DelayAtLeastUs(100000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
+        SDK_DelayAtLeastUs(1000000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
+        printf("LED on!\r\n");
         
         bsp_led_ctl (1);
-        SDK_DelayAtLeastUs(100000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
+        SDK_DelayAtLeastUs(1000000, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
+        printf("LED off!\r\n");
     }
 }

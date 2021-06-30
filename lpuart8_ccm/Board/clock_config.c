@@ -200,7 +200,7 @@ void BOARD_BootClockRUN(void)
     /* Set AHB_PODF.
      *设置CBCDR[AHB_PODF] 时钟分频寄存器，取值范围 0到15
     */
-    CLOCK_SetDiv(kCLOCK_AhbDiv, 1);
+    CLOCK_SetDiv(kCLOCK_AhbDiv, 0);
     /* Set IPG_PODF. */
     CLOCK_SetDiv(kCLOCK_IpgDiv, 3);
     /* Set ARM_PODF.
