@@ -14,7 +14,7 @@ int main(void)
 	
     /* bsp init */
     bsp_led_init();
-    bsp_lpuart_init(8);
+    bsp_lpuart_init(1);
     
     printf("Hello World!\r\n");
     

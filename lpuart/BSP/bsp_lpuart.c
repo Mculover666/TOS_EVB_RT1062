@@ -108,9 +108,9 @@ void bsp_lpuart_deinit(char num)
 #include <stdio.h>
 int fputc(int ch, FILE *stream)
 {
-    while (!(kLPUART_TxDataRegEmptyFlag & LPUART_GetStatusFlags(LPUART8)));
+    while (!(kLPUART_TxDataRegEmptyFlag & LPUART_GetStatusFlags(LPUART1)));
         
-    LPUART_WriteByte(LPUART8, ch);
+    LPUART_WriteByte(LPUART1, ch);
     
     return ch;
 }

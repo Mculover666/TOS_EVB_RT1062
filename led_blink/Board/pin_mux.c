@@ -52,11 +52,11 @@ void BOARD_InitPins(void) {
     CLOCK_EnableClock(kCLOCK_Iomuxc);           /* iomuxc clock (iomuxc_clk_enable): 0x03u */
 
     IOMUXC_SetPinMux(
-        IOMUXC_GPIO_AD_B0_00_GPIO1_IO00,        /* GPIO_AD_B0_00 is configured as GPIO1_IO00 */
+        IOMUXC_GPIO_SD_B1_02_GPIO3_IO02,        /* GPIO_AD_B0_00 is configured as GPIO1_IO00 */
         0U);                                    /* Software Input On Field: Input Path is determined by functionality */
 
     IOMUXC_SetPinConfig(
-        IOMUXC_GPIO_AD_B0_00_GPIO1_IO00,        /* GPIO_AD_B0_00 PAD functional properties : */
+        IOMUXC_GPIO_SD_B1_02_GPIO3_IO02,        /* GPIO_AD_B0_00 PAD functional properties : */
         0x10B0u);                               /* Slew Rate Field: Slow Slew Rate
                                                  Drive Strength Field: R0/6
                                                  Speed Field: medium(100MHz)
