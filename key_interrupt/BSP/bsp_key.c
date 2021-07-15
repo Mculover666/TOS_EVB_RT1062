@@ -35,30 +35,15 @@ void bsp_key_init(char num)
     }
 }
 
-void KEY1_2_GPIO_IRQHandler(void)
+void KEY1_GPIO_IRQ_HANDLER(void)
 {
-    uint32_t flag;
-    
-    //flag = GPIO_PortGetInterruptFlags(KEY1_GPIO);
 //    GPIO_PortClearInterruptFlags(KEY1_GPIO, 1U << KEY1_GPIO_PIN);
+    GPIO_PortClearInterruptFlags(KEY1_GPIO, 1U << KEY1_GPIO_PIN);
+    g_KEY1_Signal = true;
+}
+
+void KEY2_GPIO_IRQ_HANDLER()
+{
     GPIO_PortClearInterruptFlags(KEY2_GPIO, 1U << KEY2_GPIO_PIN);
-//    g_KEY1_Signal = true;
     g_KEY2_Signal = true;
-    
-//    switch (flag) {
-//        case ~(1U << KEY1_GPIO_PIN):
-//            /* clear the interrupt status */
-//            GPIO_PortClearInterruptFlags(KEY1_GPIO, 1U << KEY1_GPIO_PIN);
-//            g_KEY1_Signal = true;
-//            break;
-//        
-//        case ~(1U << KEY2_GPIO_PIN):
-//            /* clear the interrupt status */
-//            GPIO_PortClearInterruptFlags(KEY2_GPIO, 1U << KEY2_GPIO_PIN);
-//            g_KEY2_Signal = true;
-//            break;
-//        default:
-//            GPIO_PortClearInterruptFlags(KEY1_GPIO, 1U << KEY1_GPIO_PIN);
-//            GPIO_PortClearInterruptFlags(KEY2_GPIO, 1U << KEY2_GPIO_PIN);
-//    }
 }
